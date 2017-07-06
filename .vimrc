@@ -5,6 +5,10 @@ call pathogen#helptags()
 filetyp plugin indent on
 syntax on
 
+" allowing 256 colors handling
+let &t_Co=256
+colorscheme molokai
+
 " Track the engine.
 "Plugin 'SirVer/ultisnips'
 
