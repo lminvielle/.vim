@@ -127,3 +127,5 @@ nnoremap <C-p> ]p
 nmap <leader>D :NERDTreeToggle<cr>
 " Syntastic
 nmap <leader>s :SyntasticCheck<cr>
+
+
