@@ -54,7 +54,7 @@ let g:airline#extensions#tabline#enabled = 1
   "\ '' : '',
   "\ }
 " Show just the filename
-" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -76,6 +76,9 @@ let g:tagbar_autoclose = 1
 " || Easy-tag settings ||
 let g:easytags_auto_highlight = 0
 let g:easytags_auto_update = 1
+
+"set tags=./tags;,tags;
+set tags=tags;
 
 
 " || Customized mappings ||
@@ -128,4 +131,7 @@ nmap <leader>D :NERDTreeToggle<cr>
 " Syntastic
 nmap <leader>s :SyntasticCheck<cr>
 
-
+" mergetool
+map <leader>1 :diffget LOCAL<CR>
+map <leader>2 :diffget BASE<CR>
+map <leader>3 :diffget REMOTE<CR>
