@@ -5,9 +5,13 @@ call pathogen#helptags()
 filetyp plugin indent on
 syntax on
 
-" allowing 256 colors handling
+" Allowing 256 colors handling for Vim in terminal
 let &t_Co=256
 colorscheme molokai
+" Cursor shape on Insert mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_SR = "\<Esc>]50;CursorShape=2\x7"  " unknown option t_SR
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Track the engine.
 "Plugin 'SirVer/ultisnips'
@@ -81,8 +85,17 @@ let g:easytags_auto_update = 1
 set tags=tags;
 
 
+"" || Latex-suite ||
+"set grepprg=grep\ -nH\ $*
+"let g:tex_flavor='latex'
+"imap <C-space> <Plug>IMAP_JumpForward
+"nmap <C-Space> <Plug>IMAP_JumpForward
+"let g:Tex_DefaultTargetFormat = 'pdf'
+
+
 " || Customized mappings ||
 let mapleader=" "
+let maplocalleader=" "
 noremap! jj <esc>
 noremap! kk <esc>
 " go faster through file
@@ -123,6 +136,8 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
 " For auto path-completion
 inoremap <S-Tab> <C-x><C-f>
+" Omni completion
+inoremap <C-Space> <C-X><C-O>
 " Pasting with respect with local indentation
 nnoremap <C-p> ]p
 

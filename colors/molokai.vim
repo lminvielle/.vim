@@ -133,7 +133,8 @@ else
    "hi Normal          guifg=#F0F0F0 guibg=#080808
    "hi Normal          guifg=#DCDCDC guibg=#080808
    "hi Normal          guifg=#EDEDED guibg=#080808
-   hi Normal          guifg=#DCDCDC guibg=#1A1A1A
+   "hi Normal          guifg=#DCDCDC guibg=#1A1A1A
+   hi Normal          guifg=#C8C8C8 guibg=#1A1A1A
    "hi Comment         guifg=#7E8E91
    hi Comment         guifg=#338994
    hi CursorLine                    guibg=#293739
