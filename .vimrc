@@ -37,6 +37,7 @@ set wildmode=longest,list,full "for a bash-like behaviour when opening files or 
 set wildmenu
 set autochdir " Set working directory to the current file
 set tw=79
+set colorcolumn=+1  " Draw a vertical line at textwidth
 
 
 " || Airline settings ||
@@ -71,7 +72,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+" python
+" ignoring 'Block comment should start with ' #''
+" ignoring 'line too long'
+" ignoring 'unexpected indentation (comment)'
+let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116'
 
 " || Tagbar settings ||
 let g:tagbar_autoclose = 1
@@ -81,8 +86,17 @@ let g:tagbar_autoclose = 1
 let g:easytags_auto_highlight = 0
 let g:easytags_auto_update = 1
 
+
+" || jedi-vim settings ||
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures="0"
+
 "set tags=./tags;,tags;
 set tags=tags;
+
+
+" || AutoPep8 settings ||
+let g:autopep8_disable_show_diff=1
 
 
 "" || Latex-suite ||
@@ -150,5 +164,3 @@ nmap <leader>s :SyntasticCheck<cr>
 map <leader>1 :diffget LOCAL<CR>
 map <leader>2 :diffget BASE<CR>
 map <leader>3 :diffget REMOTE<CR>
-
-"testing ssh key"
