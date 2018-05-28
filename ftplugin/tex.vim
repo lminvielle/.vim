@@ -12,3 +12,5 @@ let g:vimtex_view_general_options_latexmk = '--unique'
 
 " spellcheck
 set spell spelllang=en_gb
+
+unmap <leader>l

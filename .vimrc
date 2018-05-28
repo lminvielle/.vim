@@ -132,7 +132,7 @@ nnoremap <leader>l :TagbarToggle<cr>
 " remove all highlight
 nnoremap <leader>/ :noh<cr>
 "delete without copying
-noremap <S-d> "_d 
+nnoremap <S-d> "_d
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
 set hidden
@@ -156,7 +156,7 @@ inoremap <C-Space> <C-X><C-O>
 nnoremap <C-p> ]p
 
 " NERDTree
-nmap <leader>D :NERDTreeToggle<cr>
+nnoremap <leader>D :NERDTreeToggle<cr>
 " Syntastic
 nmap <leader>s :SyntasticCheck<cr>
 
