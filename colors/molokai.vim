@@ -110,7 +110,9 @@ hi VisualNOS                     guibg=#403D3D
 "hi Visual                        guibg=#4d001e
 "hi Visual                        guibg=#800031
 "hi Visual                        guibg=#006600
-hi Visual                        guibg=#005700
+"hi Visual                        guibg=#005700
+"hi Visual                        guibg=#782387
+hi Visual                        guibg=#960843
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 

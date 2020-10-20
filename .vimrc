@@ -37,6 +37,7 @@ set wildmode=longest,list,full "for a bash-like behaviour when opening files or 
 set wildmenu
 set autochdir " Set working directory to the current file
 set tw=79
+set fo-=t
 set colorcolumn=+1  " Draw a vertical line at textwidth
 
 
@@ -76,7 +77,9 @@ let g:syntastic_check_on_wq = 0
 " ignoring 'Block comment should start with ' #''
 " ignoring 'line too long'
 " ignoring 'unexpected indentation (comment)'
-let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116'
+" ignoring 'module level import not at top of file'
+" ignoring 'indentation is not a multiple of four (comment)'
+let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116,E402,E114'
 
 " || Tagbar settings ||
 let g:tagbar_autoclose = 1
@@ -88,7 +91,10 @@ let g:easytags_auto_update = 1
 
 
 " || jedi-vim settings ||
+" Jedi is the autocommpletion package
+" popup a window automatically (if 0, popup when completion button)
 let g:jedi#popup_on_dot = 0
+" show in another window the arguments of function
 let g:jedi#show_call_signatures="0"
 
 "set tags=./tags;,tags;
@@ -97,6 +103,8 @@ set tags=tags;
 
 " || AutoPep8 settings ||
 let g:autopep8_disable_show_diff=1
+" ignoring line too long
+let g:autopep8_ignore="E501"
 
 
 "" || Latex-suite ||
@@ -133,6 +141,7 @@ nnoremap <leader>l :TagbarToggle<cr>
 nnoremap <leader>/ :noh<cr>
 "delete without copying
 nnoremap <S-d> "_d
+vnoremap <S-d> "_d
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
 set hidden
