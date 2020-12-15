@@ -136,7 +136,8 @@ else
    "hi Normal          guifg=#DCDCDC guibg=#080808
    "hi Normal          guifg=#EDEDED guibg=#080808
    "hi Normal          guifg=#DCDCDC guibg=#1A1A1A
-   hi Normal          guifg=#C8C8C8 guibg=#1A1A1A
+   "hi Normal          guifg=#C8C8C8 guibg=#1A1A1A
+   hi Normal          guifg=#F5F5F5 guibg=#0A0A0A
    "hi Comment         guifg=#7E8E91
    hi Comment         guifg=#338994
    hi CursorLine                    guibg=#293739
@@ -154,11 +155,12 @@ end
 "
 if &t_Co > 255
    if s:molokai_original == 1
-      hi Normal                   ctermbg=234
+      hi Normal                   ctermbg=124
       hi CursorLine               ctermbg=235   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    else
-      hi Normal       ctermfg=252 ctermbg=233
+     "In terminal 
+      hi Normal       ctermfg=252 ctermbg=232
       hi CursorLine               ctermbg=234   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    endif
@@ -252,7 +254,7 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=59
 
    if exists("g:rehash256") && g:rehash256 == 1
-       hi Normal       ctermfg=252 ctermbg=234
+       "hi Normal       ctermfg=252 ctermbg=234
        hi CursorLine               ctermbg=236   cterm=none
        hi CursorLineNr ctermfg=208               cterm=none
 

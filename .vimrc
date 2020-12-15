@@ -79,7 +79,8 @@ let g:syntastic_check_on_wq = 0
 " ignoring 'unexpected indentation (comment)'
 " ignoring 'module level import not at top of file'
 " ignoring 'indentation is not a multiple of four (comment)'
-let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116,E402,E114'
+" ignoring 'too many leading '#' for block comment'
+let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116,E402,E114,E266'
 
 " || Tagbar settings ||
 let g:tagbar_autoclose = 1
@@ -103,8 +104,12 @@ set tags=tags;
 
 " || AutoPep8 settings ||
 let g:autopep8_disable_show_diff=1
-" ignoring line too long
-let g:autopep8_ignore="E501"
+" ignoring:
+" line too long
+" too many leading '#' for block comment
+" block comment should start with '# '
+" module level import not at top of file
+let g:autopep8_ignore="E501,E266,E265,E402"
 
 
 "" || Latex-suite ||
