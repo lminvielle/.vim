@@ -80,7 +80,8 @@ let g:syntastic_check_on_wq = 0
 " ignoring 'module level import not at top of file'
 " ignoring 'indentation is not a multiple of four (comment)'
 " ignoring 'too many leading '#' for block comment'
-let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116,E402,E114,E266'
+" ignoring 'line break before binary operator'
+let g:syntastic_python_flake8_args = '--ignore=E265,E501,E116,E402,E114,E266,W503'
 
 " || Tagbar settings ||
 let g:tagbar_autoclose = 1
